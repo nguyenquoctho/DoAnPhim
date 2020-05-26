@@ -1,0 +1,63 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.imgContainer{
+    width: 100%;
+    // padding: 40px 0;
+    background-image: url("https://cdn.clipart.email/e8a40c2044ac4cd548a339d4fa2080a8_28-collection-of-nighttime-sky-clipart-high-quality-free-_1600-1200.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    flex-wrap: wrap;
+    
+    ::-webkit-scrollbar{
+        width: 10px; border-radius: 3px;
+    }
+    ::-webkit-scrollbar-track{
+        border: 7px solid #232943;
+        box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,.5);
+    }
+    ::-webkit-scrollbar-thumb{
+        background: linear-gradient(45deg,$color-yellow-1,$color-purple-2);
+        border-radius: 3px;
+    }
+    // .img__Overplay{
+    //     position: absolute;
+    //     width: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     height: 100%;
+    //     background-color:   rgba(0,0,0,.57);;
+    // }
+    // .img__Content{
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+     
+    //     width: 100%;
+    //     background: none;
+    // }
+}
+.imgBehind{
+    width: 100%;
+    min-height: 450px;
+    margin: 100px 0;
+   position: relative;
+     .imgBehind__Img{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+        background-image: url("https://18thwall.com/wp-content/uploads/2018/02/imagesvc.timeincapp.com_.jpg");
+        background-size: cover;
+         background-attachment: fixed;
+         background-position: center;
+         z-index: 5;
+     }
+     .imgBehind__OverPlay{
+         position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.57);
+        z-index: 10;
+     }
+}

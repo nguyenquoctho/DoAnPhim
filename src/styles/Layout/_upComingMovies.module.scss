@@ -1,0 +1,217 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.listmovieContainer {
+  // position: relative;
+  // background: none;
+  margin: 50px auto;
+  .listMovielider{
+    margin: 50px auto;
+  }
+  // h2{
+  //   @include styleText(25, $fw-bold-1, $color-yellow-1);
+  // }
+}
+// .listmovieTitle {
+//   @include styleText(44px, $fw-bold-1, $color-red-0);
+//   margin: 30px;
+//   position: relative;
+//   &::after {
+//     content: "";
+//     width: 450px;
+//     height: 3px;
+//     background: linear-gradient(90deg, #f7ba70, #f06f24);
+//     position: absolute;
+//     bottom: -5px;
+//     left: 0;
+//   }
+// }
+
+// .listMovieliderContainer{
+//     position: relative;
+//     .listMovielider {
+       
+//       width: 100%;
+//       height: 420px;
+//       box-sizing: border-box;
+//       margin: 0;
+//       padding: 0;
+//       display: flex;
+//       align-items: center;
+//       overflow: hidden;
+//     }
+    
+// }
+
+.upComingIntro{
+    .upComingIntroFilm{
+      margin: 0 20px;
+        .upComingIntrodescribe{
+          @include styleButtonMain();
+          margin-top: 5px;
+          &:hover{
+            transform: translate(-3px,-3px);
+            
+        }
+        }
+        .upComingIntro__name{
+          @include styleText(25px, $fw-bold-1, $color-yellow-1);
+        }
+        .upComingIntro__icon{
+          i{
+            @include styleText($fs-3, $fw-bold-1, $color-yellow-3);
+          }
+          span{
+            margin-left: 20px;
+            @include styleText($fs-2,$fw-normal,$color-white-0);
+          }
+        }
+        .upComingIntro__detail{
+          @include styleText($fs-0,$fw-normal,$color-white-0);
+          margin-bottom: 20px;
+        }
+    }
+
+    .upComingIntroTrailer{
+        position: relative;
+        .upComingIntroImg{
+          margin-top: 30px;
+          img{
+            width: 540px;
+            height: 300px;
+            border-radius: 30px;
+          }
+        }
+        i{
+            position: absolute;
+            height: 80px;
+            width: 80px;
+            line-height: 78px;
+            border-radius: 50%;
+            border:2px solid #ec7532;
+            text-align: center;
+            color: white;
+            top: 50%;
+            left: 50%;
+            font-size: 2rem;
+            transform: translate(-50%,-50%);
+            transition: .5s;
+            &:hover{
+                height: 70px;
+                width: 70px;
+                font-size: 1.5rem;
+                line-height: 68px;
+            }
+        }
+    }
+}
+
+
+.movieSlide {
+  width: 30%;
+  height: 300px;
+  transition: 0.5s;
+  margin: 0px;
+  padding: 0;
+  cursor: pointer;
+
+}
+.movie__item {
+  cursor: pointer;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  height: 300px;
+  margin: 0 auto;
+  &:hover{
+    .movie__overplay{
+        left:-100%;
+    }
+    .movie__detail{
+        opacity: 1;
+    
+     }
+  }
+  .movieImg {
+      width: 250px;
+      height: 300px;
+  }
+  .movie__overplay {
+    position: absolute;
+    top: 0;
+    left: -600%;
+    transform: skewX(45deg);
+    background: rgba(0,0,0,.57);
+    width: 400%;
+    opacity: 0.85;
+    height: 100%;
+    transition: 0.7s;
+  }
+  .movie__detail {
+    position: absolute;
+    top: 30%;
+    width: 250px;
+    text-align: center;
+   
+    opacity: 0;
+    transition: all 1s;
+    h4{
+        margin-bottom: 30px;
+        @include styleText($fs-3,$fw-bold,$color-yellow-1);
+        text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, 2px 2px 2px rgba(206,89,55,0);  
+    }
+    p{
+      @include styleText($fs-5,$fw-normal,$color-white-0);
+      text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, 2px 2px 2px rgba(206,89,55,0);  
+    }
+    .movie__Click {
+      margin-top: 50px;
+      transform: skewX(-25deg);
+      i {
+          @include styleButtonMovie();
+          
+      }
+      .movie__bookTicket {
+        @include styleButtonMovie()
+      }
+    }
+  }
+  @include respond-to("extra-large") {
+    width: 220px;
+    height: 275px;
+    .movie__detail {
+      h4{
+        margin-bottom: 15px;
+        @include styleText($fs-2,$fw-bold,$color-yellow-1);
+        
+    }
+    p{
+      @include styleText($fs-1$fs-5,$fw-normal,$color-white-0);
+       
+    }
+      width: 220px;}
+    .movieImg {
+      width: 220px;
+      height: 275px;
+  }
+  }
+  @include respond-to("large") {
+    width: 200px;
+    height: 255px;
+    .movie__detail {
+     
+      width: 200px;
+    
+    }
+    .movieImg {
+      width: 200px;
+      height: 255px;
+  }
+  }
+}
+.goLeft {
+    @include styleButtonGoLeft(-3%);
+  }
+  .goRight {
+    @include styleButtonGoRight(-3%);
+  }

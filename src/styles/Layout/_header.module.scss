@@ -1,0 +1,102 @@
+@import '../Helper//mixin';
+@import "../Helper/variable";
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@mixin styleText($fs,$fw,$color){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+.header{
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,.57);
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    @include styleText(18px, 500, #fff);
+    .myNavbar{
+       margin-right: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .navbrand{
+            font-family: 'Luckiest Guy', cursive;
+            p{
+                color: $color-yellow-1;
+                font-size: 5vh;
+                // background-image: url(https://unsplash.it/801);
+                background-size: cover;
+                // background-clip: text;
+                // -webkit-background-clip: text;
+                // color: transparent;
+                margin-bottom: 0;
+            }
+            // margin-right: 15%;
+            // @include styleText(22px, 500, #fff);
+        }
+        .myMain__Input{
+            background-color:$color-yellow-1;
+            // border-radius: 20px;
+            height: 45px;
+            svg {
+                &:hover {
+                  color: $color-white-0;
+                }
+              }
+              input {
+                background-color: $color-white-0;
+                height: 45px;
+                @include styleText($fs-5, 500, #f0a64c);
+                
+              }
+        }
+        
+        .myNavItem{
+            border-bottom: 1px solid rgba(225,225,225,.2);
+            .myNavLink{
+                padding-top: 12px;
+                padding-left: 20px;
+                padding-right: 20px;
+                color: #fff;
+                transition: .5s;
+                &:hover{
+                    color: #f06f24;
+                }
+            }
+            &::after{
+                content:'';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: linear-gradient(90deg,#f7ba70,#f06f24);
+                transition: .5s;
+               
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+            }
+        }
+        .acount{
+
+            @include styleText(22px, 500, #f0a64c);
+            &:hover{
+                color:#f06f24 ;
+            }
+
+        }
+        .acountNotLogin{
+            @include styleText(22px, 500, $color-gray-2);
+            &:hover{
+                @include styleText(22px, 500, $color-gray-2);
+              i{
+                  scale: (0.8);
+              }
+            }
+        }
+    }
+ 
+    
+}
+

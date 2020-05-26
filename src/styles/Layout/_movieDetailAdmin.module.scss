@@ -1,0 +1,30 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.movieDetailAdmin {
+  background: #74ebd5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #acb6e5,
+    #74ebd5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #acb6e5,
+    #74ebd5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 100vh;
+  padding: 30px 0;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 110px;
+    @include styleText($fs-7, $fw-bold, $color-white-0);
+  }
+  .movieDetailAdmin__detail {
+    .movieDetailAdmin__detail__edit {
+      
+    }
+    .movieDetailAdmin__detail__info {
+    }
+  }
+}

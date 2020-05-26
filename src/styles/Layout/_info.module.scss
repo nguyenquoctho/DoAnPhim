@@ -1,0 +1,52 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.info{
+    padding: 100px 0;
+    background-image: url("https://cdn.clipart.email/e8a40c2044ac4cd548a339d4fa2080a8_28-collection-of-nighttime-sky-clipart-high-quality-free-_1600-1200.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .listInfo{
+        display: grid;
+        position: relative;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 18px;
+    }
+    .info__card{
+        cursor: pointer;
+        .info__cardImg{
+            margin: 10px 0;
+            position: relative;
+            .info__cardImg__overplay{
+                position: absolute;
+                // width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: none;
+                transition: .5s;
+                width: 100%;
+                // margin: 0 5%;
+            }
+            img{
+                width: 100%;
+                // margin: 0 5%;
+                
+            }
+        }
+        &:hover{
+            .info__cardImg{
+                .info__cardImg__overplay{
+                    background: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+       h4{
+        @include styleText($fs-2, $fw-normal, $color-yellow-1);
+        text-transform: uppercase;
+       }
+       p{
+        @include styleText($fs-0, $fw-normal, $color-black-0);
+       }
+    }
+}

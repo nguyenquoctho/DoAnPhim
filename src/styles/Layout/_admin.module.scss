@@ -1,0 +1,55 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.adminLayout{
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+  
+    .adminSibar__width{
+        width: 15%;
+    }
+    .adminSibar__width__small{
+        width: 5%;
+    }
+    .adminSibar{
+        
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: #7386D5;
+        ul{
+            li{
+                transition: .5s;
+                border-bottom: 1px solid $color-white-0;
+                a{
+                    i{
+                        margin-right: 3px;
+                    }
+                    @include styleText($fs-0,$fw-normal,$color-white-0);
+                    transition: .5s;
+                }
+             
+                &:hover{
+                    background-color: $color-white-0;
+                   a{
+                    @include styleText($fs-0,$fw-normal,#7386D5);
+                   }
+                }
+            }
+        }
+    }
+    .adminPages__width{
+        width: 85%;
+    }
+    .adminPages__width__small{
+        width: 95%;
+    }
+    .adminPages{
+       
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-height: 100vh;
+    }
+}

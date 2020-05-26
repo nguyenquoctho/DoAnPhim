@@ -1,0 +1,36 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.Title {
+    // text-align: center;
+    @include styleText(44px, $fw-bold-1, $color-white-0);
+    margin: 30px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 450px;
+      height: 3px;
+      background: linear-gradient(90deg, #f7ba70, #f06f24);
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+    }
+    @include respond-to("medium") {
+    
+          @include styleText(35px, $fw-bold-1, $color-red-0);
+          margin: 25px;
+          &::after {
+         
+            width: 300px;
+          }
+        }
+        @include respond-to("mobile") {
+    
+          @include styleText(28px, $fw-bold-1, $color-red-0);
+          margin: 20px;
+          &::after {
+         
+            width: 180px;
+          }
+        }
+  }
+

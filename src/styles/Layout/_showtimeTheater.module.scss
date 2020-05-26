@@ -1,0 +1,103 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.showtime__container {
+  width: 100%;
+  margin: 30px auto;
+  background-color: #e4e0e0;
+  padding: 20px 30px;
+  height: 370px;
+  border-radius: 40px;
+  transition: .5s;
+  .showtime__cumRap__Scroll {
+    height: 300px;
+    overflow: auto;
+    .showtime__CumRap {
+      .showtime__tenCumRap {
+        @include styleText($fs-5, $fw-bold-1, $color-purple);
+        cursor: pointer;
+      }
+      .showtime__tenCumRap__hidden {
+        @include styleText($fs-0, $fw-bold-1, $color-purple-1);
+        cursor: pointer;
+      }
+      .showtime__diaChi {
+        @include styleText($fs-1, $fw-normal, $color-blue);
+      }
+      .showtime__diaChi__hidden {
+        @include styleText($fs-1, $fw-normal, $color-blue-1);
+      }
+    }
+  }
+  .showtime__tenPhim__Scroll {
+    // max-height: 300px;
+    // overflow: auto;
+    
+    .showtime__tenPhim {
+      @include styleText($fs-2, $fw-normal, $color-blue);
+      // width: 100%;
+      // text-align: center;
+    
+    }
+    .showtime__lichChieu {
+      margin: 15px;
+      .showtime__lichChieu__gio {
+        cursor: pointer;
+        background-color: $color-yellow-1;
+        outline: none;
+        border: none;
+        transition: .5s;
+        @include styleText($fs-2, $fw-normal, $color-yellow-3);
+        margin-right: 3px;
+        &:hover{
+          background-color: $color-purple-2;
+        }
+      }
+      .showtime__lichChieu__ngay {
+        @include styleText($fs-0, $fw-normal, $color-red-1);
+      }
+    }
+  }
+  @include respond-to("small") {
+    .showtime__cumRap__Scroll{
+      .showtime__CumRap {
+        .showtime__tenCumRap {
+          @include styleText($fs-0, $fw-bold-1, $color-purple);
+         
+        }
+        .showtime__tenCumRap__hidden {
+          @include styleText($fs-1, $fw-bold-1, $color-purple-1);
+          
+        }
+        // .showtime__diaChi {
+        //   @include styleText($fs-1, $fw-normal, $color-blue);
+        // }
+        // .showtime__diaChi__hidden {
+        //   @include styleText($fs-1, $fw-normal, $color-blue-1);
+        // }
+      }
+    }
+    .showtime__tenPhim__Scroll {
+      // max-height: 300px;
+      // overflow: auto;
+      
+      .showtime__tenPhim {
+        @include styleText($fs-5, $fw-normal, $color-blue);
+        // width: 100%;
+        // text-align: center;
+      
+      }
+      .showtime__lichChieu {
+        margin: 5px;
+        .showtime__lichChieu__gio {
+          @include styleText($fs-0, $fw-normal, $color-yellow-3);
+        }
+        .showtime__lichChieu__ngay {
+          @include styleText($fs-1$fs-0, $fw-normal, $color-red-1);
+        }
+      }
+    }
+  }
+}
+.displayNone{
+  display: none;
+}

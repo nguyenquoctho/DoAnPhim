@@ -1,0 +1,155 @@
+@import "../Helper//mixin";
+@import "../Helper/variable";
+@mixin styleText($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+.MessengerIcon {
+  position: fixed;
+  bottom: 20%;
+  right: 2%;
+  z-index: 100;
+  width: 85px;
+  height: 85px;
+  animation: mymove 2s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  .MessengerIcon__Border {
+    width: 75px;
+    height: 75px;
+    animation: myanimation 3s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  img {
+    cursor: pointer;
+    width: 50px;
+    scale: 0.8;
+  }
+}
+@keyframes myanimation {
+    0% {
+      scale: 0.8;
+      background-color: rgba(236, 157, 10, 0.1);
+    }
+    25% {
+      scale: 1;
+      background-color: rgba(236, 157, 10, 0.4);
+    }
+    50% {
+      scale: 1.2;
+      background-color: rgba(236, 157, 10, .6);
+    }
+    75% {
+      scale: 1.4;
+      background-color: rgba(236, 157, 10, 0.7);
+    }
+    100% {
+      scale: 1.4;
+      background-color: rgba(236, 157, 10, 0.5);
+    }
+  }
+@keyframes mymove {
+  0% {
+    scale: 0.8;
+    background-color: rgba(236, 157, 10, 0.7);
+  }
+  25% {
+    scale: 1;
+    background-color: rgba(236, 157, 10, 0.3);
+  }
+  50% {
+    scale: 1.2;
+    background-color: rgba(236, 157, 10, .2);
+  }
+  75% {
+    scale: 1.4;
+    background-color: rgba(236, 157, 10, 0.5);
+  }
+  100% {
+    scale: 1.4;
+    background-color: rgba(236, 157, 10, 0.7);
+  }
+}
+
+.chatBox {
+  background-color: $color-white-0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 280px;
+  height: 380px;
+  z-index: 100;
+  .chatBox__Close {
+    text-align: right;
+    align-items: center;
+
+    i {
+      color: $color-yellow-1;
+      cursor: pointer;
+      transition: 0.5s;
+      &:hover {
+        scale: 1.5;
+        color: $color-black-0;
+        // @include styleText($fs-0, $fw-normal, $color-black-0);
+      }
+      margin-right: 10px;
+    }
+  }
+  .chatBox__Hr {
+    -webkit-box-shadow: 0px 22px 20px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 22px 20px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 22px 20px -4px rgba(0, 0, 0, 0.75);
+  }
+  .listMessage {
+    height: 250px;
+    overflow: auto;
+
+    .listMessage__Item_User {
+      padding: 5px;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-color:  $color-yellow-4;
+      @include styleText($fs-1, $fw-normal, $color-white-0);
+    }
+    .listMessage__Item_Admin {
+      padding: 5px;
+      background-color: $color-gray-3;
+      @include styleText($fs-1, $fw-normal, $color-gray-4);
+      width: 100%;
+      border-top-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+  }
+}
+.displayNone{
+  display: none;
+}
+.ListMessage__Item__User{
+  padding: 5px;
+  // width: 100%;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius:15px;
+  margin: 0;
+}
+.ListMessage__Item__partner{
+  padding: 5px;
+  // width: 100%;
+  background-color: $color-gray-3;
+  border-top-right-radius:15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius:15px;
+  margin: 0;
+}

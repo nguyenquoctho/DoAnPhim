@@ -1,0 +1,222 @@
+@mixin styleText($fs, $fw, $color) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+
+@mixin styleButton($bg-color, $border, $pd-top-botton, $pd-right-left) {
+  background-color: $bg-color;
+  border: 1px solid $border;
+  padding: $pd-top-botton $pd-right-left;
+}
+
+@mixin hoverButton($bg-color, $color, $border) {
+  background-color: $bg-color;
+  color: $color;
+  border: 1px solid $border;
+}
+
+@mixin listTable__Btn($color, $color-hover) {
+  background-color: transparent;
+  border: none;
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  &:hover {
+    i {
+      color: $color-hover;
+    }
+  }
+  i {
+    color: $color;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $breakpoint
+    );
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "$breakpoint k ton tai trong breakpoints";
+  }
+}
+
+@mixin respond-toMin($breakpoint) {
+  @if map-has-key($map: $breakpoints, $key: $breakpoint) {
+    $value: map-get(
+      $map: $breakpoints,
+      $key: $breakpoint
+    );
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  } @else {
+    @warn "$breakpoint k ton tai trong breakpoints";
+  }
+}
+
+%btn-styles {
+  position: absolute;
+  top: 50%;
+  justify-self: center;
+  align-self: center;
+  height: 20px;
+  color: #fff;
+  font-size: 12px;
+  transform: translateY(-50%);
+  width: 20px;
+  border-radius: 50%;
+  border: 0px;
+  outline: none;
+  line-height: 15px;
+  transition: 0.5s;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  @include styleButton(#222, 0px, 3px, 3px);
+  &:hover {
+    @include hoverButton(#fff, #222, #fff);
+  }
+}
+
+@mixin styleButtonMovie() {
+  @include styleText($fs-1, $fw-normal, $color-white-0);
+  text-align: center;
+  background: $color-red-2;
+  transform: skewX(-25deg);
+  letter-spacing: 3px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 2px;
+  &:hover {
+    text-decoration: none;
+    background: $color-purple;
+  }
+}
+
+@mixin styleButtonMain() {
+  background: rgba(0, 0, 0, 0.57);
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px,
+    2px 2px 2px rgba(206, 89, 55, 0);
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 10px 30px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  outline: none;
+  overflow: hidden;
+  transition: 1s;
+  i {
+    margin-right: 15px;
+  }
+  &:hover {
+    transform: translate(-3px, -3px);
+    background-color: $color-white-0;
+    color: rgba(0, 0, 0, 0.57);
+  }
+  &:active {
+    transform: scale(0.8);
+  }
+}
+@mixin styleButtonGoLeft($mg-left) {
+  left: $mg-left;
+  @extend %btn-styles;
+}
+@mixin styleButtonGoRight($mg-right) {
+  right: $mg-right;
+  @extend %btn-styles;
+}
+
+@mixin styleMainInput() {
+  background-color: $color-yellow-1;
+  // border-radius: 20px;
+  height: 45px;
+  svg {
+    &:hover {
+      color: $color-white-0;
+    }
+  }
+  input{
+    background-color: $color-white-0;
+    height: 45px;
+    @include styleText($fs-5, 500, #f0a64c);
+  }
+}
+
+@mixin styleInput() {
+  background-color: $color-yellow-1;
+  // border-radius: 20px;
+  height: 45px;
+  margin-bottom: $mg-1;
+  input{
+    background-color: $color-white-0;
+    height: 45px;
+  
+    @include styleText($fs-5, 500, #f0a64c);
+  }
+}
+
+
+@mixin styleInputForm() {
+  // background-color: $color-yellow-1;
+  // // border-radius: 20px;
+  height: 45px;
+  width: 230px;
+  margin-bottom: 20px;
+  input{
+    background-color: $color-white-0;
+    height: 45px;
+    @include styleText($fs-5, 500, #f0a64c);
+  }
+}
+
+@mixin styleInputFormUser() {
+  // background-color: $color-yellow-1;
+  // // border-radius: 20px;
+  height: 45px;
+  width: 70%;
+  margin-bottom: 20px;
+  // margin-left: 15%;
+  input{
+    background-color: $color-white-0;
+    height: 45px;
+    @include styleText($fs-5, 500, #f0a64c);
+  }
+}
+
+// @mixin styleInput() {
+
+// }
+
+@mixin styleButtonUser() {
+  text-align: center;
+  border: 2px solid $color-yellow-1;
+  // border-radius: 20px;
+  padding: 4px 15px;
+  background: none;
+  transition: 0.5s;
+  margin: 10px 5px;
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  @include styleText($fs-5, $fw-normal, $color-yellow-1);
+  &:hover {
+    @include styleText($fs-5, $fw-normal, $color-white-0);
+    background: $color-yellow-1;
+  }
+}

@@ -1,0 +1,16 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.formUser{
+    h2{
+        font-size: 38px;
+        font-weight: normal;
+        color: $color-yellow-1;
+        // @include styleText(38px, $fw-normal, $color-yellow-1);
+    }
+    
+    
+}
+.myTextField{
+    margin-bottom: 20px;
+    @include styleInputFormUser()
+}

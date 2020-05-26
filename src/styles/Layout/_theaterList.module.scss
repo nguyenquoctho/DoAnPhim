@@ -1,0 +1,94 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.Theater__Title {
+  color: red;
+}
+.Theater__Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  .Theater__Item {
+    position: relative;
+    transition: 1.9s;
+    &:hover{
+      .Theater__Logo{
+        transform: scale(.9);
+      }
+      .Theater__OverPlay{
+        transform: scale(.9);
+      }
+    }
+    cursor: pointer;
+    .Theater__OverPlay {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: rgba(0, 0, 0, 0.57);
+      z-index: 10;
+      border-radius: 50%;
+      margin: 0 19px;
+      transition: .5s;
+    }
+    .Theater__Logo {
+      width: 100px;
+      background-color: #fff;
+      height: 100px;
+      margin: 0 19px;
+      border-radius: 50%;
+      transition: .5s;
+    }
+  }
+
+  @include respond-to("large") {
+    // max-width: 750px!important;
+
+    .Theater__Item {
+      .Theater__Logo {
+        width: 60px;
+        height: 60px;
+        margin: 0 15px;
+     
+      }
+      .Theater__OverPlay {
+        width: 60px;
+        height: 60px;
+        margin: 0 15px;
+      }
+    }
+  }
+  @include respond-to("medium") {
+    // max-width: 750px!important;
+    margin:  0;
+    height: 90px;
+    .Theater__Item {
+      .Theater__Logo {
+        width: 45px;
+        height: 45px;
+        margin: 0 5px;
+      }
+      .Theater__OverPlay {
+        width: 45px;
+        height: 45px;
+        margin: 0 5px;
+      }
+    }
+  }
+  @include respond-to("mobile") {
+    // max-width: 750px!important;
+    margin:  0;
+    height: 70px;
+    .Theater__Item {
+      .Theater__Logo {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+      }
+      .Theater__OverPlay {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+      }
+    }
+  }
+}

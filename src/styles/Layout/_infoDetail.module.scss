@@ -1,0 +1,37 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.infoDetail{
+
+    padding-top: 100px;
+    background-image: url("https://cdn.clipart.email/e8a40c2044ac4cd548a339d4fa2080a8_28-collection-of-nighttime-sky-clipart-high-quality-free-_1600-1200.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .infoDetail__h2{
+        text-align: center;
+        @include styleText($fs-7, $fw-bold, $color-white-0);
+    }
+    .infoDetail__Content{
+        text-align: center;
+        padding: 30px;
+        width: 85%;
+        margin: 0 auto;
+        background: $color-white-0;
+       h1,h2,h3,h4{
+           text-align: center;
+       }
+       p{
+           text-align: left;
+       }
+       ul{
+           text-align: left;
+       }
+        img{
+            // // width: 100%;
+            // padding: 0 auto;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+    }
+}

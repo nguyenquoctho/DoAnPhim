@@ -1,0 +1,342 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+
+// .listmovieTitle {
+//   @include styleText(44px, $fw-bold-1, $color-red-0);
+//   margin: 30px;
+//   position: relative;
+//   &::after {
+//     content: "";
+//     width: 450px;
+//     height: 3px;
+//     background: linear-gradient(90deg, #f7ba70, #f06f24);
+//     position: absolute;
+//     bottom: -5px;
+//     left: 0;
+//   }
+// }
+.listmovieSection {
+  // width: 100%;
+  // overflow: hidden;
+
+  .listmovieContainer {
+    // position: relative;
+    // width: 100%;
+  }
+
+  .listMovielider {
+    // width: 100%;
+    // height: 550px;
+    // box-sizing: border-box;
+    // margin: 0;
+    // padding: 0;
+    // display: flex;
+    // align-items: center;
+    // // overflow: hidden;
+    // padding-top: 70px;
+  }
+
+  .movieSlide {
+    // width: 30%;
+    // height: 300px;
+    // // transition: 0.5s;
+    // margin: 0px;
+    // padding: 0;
+  }
+
+  .movie__item_orange {
+    cursor: pointer;
+    margin: 0 10px;
+    display: flex;
+    height: 420px;
+    background: #f06f24;
+    -webkit-box-shadow: inset -1px 3px 32px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -1px 3px 32px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -1px 3px 32px -5px rgba(0, 0, 0, 0.75);
+    color: #fff;
+    .movieImg {
+      border: 3px solid rgb(188, 146, 177);
+      width: 50%;
+      margin: 15px;
+      height: 380px;
+      -webkit-box-shadow: 5px 7px 0px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 5px 7px 0px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 5px 7px 0px 0px rgba(0, 0, 0, 0.75);
+    }
+    .movie__detail {
+      width: 50%;
+      margin-top: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      position: relative;
+      .movie__name {
+        @include styleText($fs-3, $fw-normal, $color-white-0);
+      }
+      .movie__Sub {
+        position: relative;
+        display: inline-block;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 7.2em; /* (Number of lines you want visible) * (line-height) */
+        line-height: 1.2em;
+        text-align: justify;
+        &::after {
+          content: "...";
+          position: absolute;
+          right: -12px;
+          bottom: 4px;
+        }
+      }
+      .movie__Click {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        i {
+          @include styleText($fs-1, $fw-normal, $color-white-0);
+          text-align: center;
+          background: $color-red-2;
+          transform: skewX(-25deg);
+          letter-spacing: 3px;
+          padding: 5px;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          overflow: hidden;
+          transition: 0.5s;
+          margin: 0 2px;
+          &:hover {
+            text-decoration: none;
+            background: $color-purple;
+          }
+        }
+        .movie__bookTicket {
+          text-align: center;
+          background: $color-red-2;
+          transform: skewX(-25deg);
+          letter-spacing: 3px;
+          margin: 0 5px;
+          padding: 5px;
+          @include styleText($fs-1, $fw-normal, $color-white-0);
+          cursor: pointer;
+          border: none;
+          outline: none;
+          overflow: hidden;
+          transition: 0.5s;
+          &:hover {
+            text-decoration: none;
+            background: $color-purple;
+          }
+        }
+      }
+      .movie__Sub.ellipsis::after {
+        content: "...";
+        position: absolute;
+        right: -12px;
+        bottom: 4px;
+      }
+    }
+  }
+
+  .movie__item_purple {
+    cursor: pointer;
+    margin: 0 10px;
+    display: flex;
+    height: 420px;
+    background: $color-purple;
+    // -webkit-box-shadow: 0px 3px 17px 5px rgba(247,242,247, 0.75);
+    // -moz-box-shadow: 0px 3px 17px 5px rgba(247,242,247, 0.75);
+    // box-shadow: 0px 3px 17px 5px rgba(247,242,247, 0.75);
+    -webkit-box-shadow: inset -1px 3px 32px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -1px 3px 32px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -1px 3px 32px -5px rgba(0, 0, 0, 0.75);
+    color: #fff;
+    transition: 0.5s;
+    .movieImg {
+      border: 3px solid rgb(188, 146, 177);
+      width: 50%;
+      margin: 15px;
+      height: 380px;
+      // transition: 1.5s;
+      -webkit-box-shadow: 5px 7px 0px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 5px 7px 0px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 5px 7px 0px 0px rgba(0, 0, 0, 0.75);
+      z-index: 10;
+    }
+
+    .movie__detail {
+      width: 50%;
+      z-index: 5;
+      margin-top: 15px;
+      margin-right: 15px;
+      margin-bottom: 15px;
+      position: relative;
+      transition: 1.5s;
+      .movie__name {
+        @include styleText($fs-3, $fw-normal, $color-white-0);
+      }
+      .movie__Sub {
+        position: relative;
+        display: inline-block;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 7.2em; /* (Number of lines you want visible) * (line-height) */
+        line-height: 1.2em;
+        text-align: justify;
+        &::after {
+          content: "...";
+          position: absolute;
+          right: -12px;
+          bottom: 4px;
+        }
+      }
+      .movie__Click {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        i {
+          @include styleText($fs-1, $fw-normal, $color-white-0);
+          text-align: center;
+          background: $color-red-2;
+          transform: skewX(-25deg);
+          letter-spacing: 3px;
+          padding: 5px;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          overflow: hidden;
+          transition: 0.5s;
+          margin: 0 2px;
+          &:hover {
+            text-decoration: none;
+            background: $color-yellow-1;
+          }
+        }
+        .movie__bookTicket {
+          text-align: center;
+          background: $color-red-2;
+          transform: skewX(-25deg);
+          letter-spacing: 3px;
+          margin: 0 5px;
+          padding: 5px;
+          @include styleText($fs-1, $fw-normal, $color-white-0);
+          cursor: pointer;
+          border: none;
+          outline: none;
+          overflow: hidden;
+          transition: 0.5s;
+          &:hover {
+            text-decoration: none;
+            background: $color-yellow-1;
+          }
+        }
+      }
+      .movie__Sub.ellipsis::after {
+        content: "...";
+        position: absolute;
+        right: -12px;
+        bottom: 4px;
+      }
+    }
+  }
+
+  .goLeft {
+    @include styleButtonGoLeft(-5%);
+  }
+  .goRight {
+    @include styleButtonGoRight(-5%);
+  }
+  @include respond-to("large") {
+    .movie__item_orange {
+      height: 360px;
+      .movieImg {
+        width: 50%;
+        margin: 15px 10px;
+        height: 300px;
+      }
+      .movie__detail {
+        width: 54%;
+        margin-right: 10px;
+        .movie__name {
+          @include styleText($fs-5, $fw-normal, $color-white-0);
+        }
+        .movie__Click {
+          display: flex;
+          flex-direction: column;
+
+          .movie__bookTicket {
+            margin: 10px;
+          }
+        }
+        .movie__Sub.ellipsis::after {
+          content: "...";
+          position: absolute;
+          right: -12px;
+          bottom: 4px;
+        }
+      }
+    }
+    .movie__item_purple {
+      height: 360px;
+      .movieImg {
+        width: 50%;
+        margin: 15px 10px;
+        height: 300px;
+      }
+      .movie__detail {
+        width: 54%;
+        margin-right: 10px;
+        .movie__name {
+          @include styleText($fs-5, $fw-normal, $color-white-0);
+        }
+        .movie__Click {
+          display: flex;
+          flex-direction: column;
+
+          .movie__bookTicket {
+            margin: 10px;
+          }
+        }
+        .movie__Sub.ellipsis::after {
+          content: "...";
+          position: absolute;
+          right: -12px;
+          bottom: 4px;
+        }
+      }
+    }
+  }
+  @include respond-to("medium") {
+    // .listmovieTitle {
+    //   @include styleText(35px, $fw-bold-1, $color-red-0);
+    //   margin: 25px;
+    //   &::after {
+
+    //     width: 350px;
+    //   }
+    // }
+  }
+  @include respond-to("small") {
+    // .listmovieTitle {
+    //   @include styleText(30px, $fw-bold-1, $color-red-0);
+    //   margin: 20px;
+    //   &::after {
+
+    //     width: 280px;
+    //   }
+    // }
+    .goLeft {
+      left: 0%;
+    }
+    .goRight {
+      right: 0%;
+    }
+  }
+}

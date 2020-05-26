@@ -1,0 +1,73 @@
+@import '../Helper//mixin';
+@import "../Helper/variable";
+
+.message{
+    display: flex;
+
+    .message__ChatBox{
+        width: 66%;
+        margin: 0 auto;
+        .ListMessage{
+            height: 90vh;
+            overflow: auto;
+            .ListMessage__Item{
+                display: block;
+                margin: 0;
+                width: 100%;
+               
+                    .ListMessage__Item__User{
+                        padding: 10px;
+                        // width: 100%;
+
+                        border-top-left-radius: 15px;
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius:15px;
+                        margin: 0;
+                    }
+                    .ListMessage__Item__partner{
+                        padding: 10px;
+                        // width: 100%;
+                        background-color: $color-gray-3;
+                        border-top-right-radius:15px;
+                        border-bottom-left-radius: 15px;
+                        border-bottom-right-radius:15px;
+                        margin: 0;
+                    }
+            
+            
+            }
+        }
+    }
+    .message__ListUser{
+        height: 100vh;
+        overflow: auto;
+        width: 30%;
+        .ItemUser{
+            cursor: pointer;
+            margin: 0;
+            border-bottom: 1px solid #74ebd5;
+            border-top: 1px solid #74ebd5;
+            border-right:  1px solid #74ebd5;
+            // border-left:  1px solid #74ebd5;
+            transition: .5s;
+            padding: 10px 20px;
+            &:hover{
+                border-left: none
+            }
+        }
+        .ItemPartner{
+            cursor: pointer;
+            margin: 0;
+            background-color:  #74ebd5;
+            border-bottom: 1px solid #74ebd5;
+            border-top: 1px solid #74ebd5;
+            border-right:  1px solid #74ebd5;
+            border-left:  1px solid #74ebd5;
+            transition: .5s;
+            padding: 10px 20px;
+            &:hover{
+                border-left: none
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.signInUp {
+  width: 100%;
+  height: 100vh;
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .signUpContainer {
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 20px 70px;
+    .signUpForm {
+      text-align: center;
+      h2 {
+        @include styleText(38px, $fw-normal, $color-yellow-1);
+        width: 100%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .myTextField {
+        @include styleInputForm()
+      }
+      a{
+          font-size: $fs-1;
+      }
+      .myBtnSubmit {
+        text-align: center;
+        border: 2px solid $color-yellow-1;
+        border-radius: 20px;
+        padding: 4px 35px;
+        background: none;
+        transition: .5s;
+        margin-top: 10px;
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        @include styleText($fs-5, $fw-normal, $color-yellow-1);
+        &:hover{
+            @include styleText($fs-5, $fw-normal,$color-white-0);
+            background: $color-yellow-1;
+        }
+      }
+    }
+  }
+  @include respond-to("medium") {
+    
+    .signUpContainer {
+      max-width: 350px;
+      padding: 10px;
+      .signUpForm {
+          
+        h2 {
+            margin-bottom: 10px;
+          @include styleText(25px, $fw-normal, $color-yellow-1);
+        }
+        .myTextField{
+            height: 30px;
+            margin: 15px 0px;
+            input{
+                padding: 10px 0px;
+            }
+            i{
+                 font-size: 15px;
+            }
+        }
+        .myBtnSubmit{
+            border-radius: 15px;
+            padding: 4px 25px;
+            @include styleText($fs-1, $fw-normal, $color-yellow-1);
+            &:hover{
+                @include styleText($fs-1, $fw-normal,$color-white-0);
+              
+            }
+        }
+      }
+    }
+  }
+  @include respond-to("small") {
+    height: 120vh;
+    .signUpContainer {
+      max-width: 250px;
+      padding: 10px;
+      .signUpForm {
+          
+        h2 {
+            margin-bottom: 10px;
+          @include styleText(25px, $fw-normal, $color-yellow-1);
+        }
+        .myTextField{
+            height: 30px;
+            margin: 15px 0px;
+            input{
+                padding: 10px 0px;
+            }
+            i{
+                 font-size: 15px;
+            }
+        }
+      }
+    }
+  }
+}

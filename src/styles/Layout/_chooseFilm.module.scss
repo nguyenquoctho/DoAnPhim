@@ -1,0 +1,317 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+
+.chooseFilmContainer{
+    background-image:url("https://media.istockphoto.com/photos/black-brick-wall-background-texture-dark-masonry-picture-id915097804?k=6&m=915097804&s=612x612&w=0&h=EsV7PNj296aSAKcrqaiWdM0RG2w4e19YS8XUB_oJvZU=");
+   
+    padding: 30px 0;
+    .chooseFilmTitleContain{
+        justify-content: center;
+        align-items: center;
+        .chooseFilmTitle{
+            transform: rotate(-15deg);
+            text-align: center;
+            align-items: center;
+         
+            line-height: .8;
+            @include styleText(42px,$fw-bold-0,$color-yellow-1);
+            text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, 2px 2px 2px rgba(206,89,55,0);    
+        }
+    }
+    .chooseFilmForm{
+        margin: 0 auto;
+        width: 100%;
+        .chooseFilmForm_1{
+            width: 100%;
+            padding: 0 auto;
+                select{
+                    margin: 10px auto;
+                    width: 250px;
+                    height: 40px;
+                    // border-bottom-left-radius:30px ;
+                    // border-bottom-right-radius:30px ;
+                    // border-top-right-radius:30px ;
+                    background-color:$color-gray-4;
+                    @include styleText($fs-2, $fw-normal,$color-white-0);
+                    cursor: pointer;
+                    &:hover{
+                        background-color:$color-purple-2;
+                    }
+                    &:focus{
+                        outline: none;
+                        box-shadow: none;
+                    }
+           
+            }
+            
+            
+        }
+        .chooseFilmForm_2{
+            margin: 10px auto;
+            padding: 0 auto;
+            width: 100%;
+            select{
+                margin: 0 auto;
+                width: 250px;
+                height: 40px;
+                // border-bottom-left-radius:30px ;
+                // border-bottom-right-radius:30px ;
+                // border-top-left-radius:30px ;
+                background-color:$color-gray-4;
+                @include styleText($fs-2, $fw-normal,$color-white-0);
+                cursor: pointer;
+                &:hover{
+                    background-color:$color-purple-2;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            
+        }
+        .chooseFilmForm_3{
+            margin: 10px auto;
+            select{
+                margin: 0 auto;
+                width: 250px;
+                height: 40px;
+                // border-top-left-radius:30px ;
+                // border-bottom-right-radius:30px ;
+                // border-top-right-radius:30px ;
+                background-color:$color-gray-4;
+                @include styleText($fs-2, $fw-normal,$color-white-0);
+                cursor: pointer;
+                &:hover{
+                    background-color:$color-purple-2;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            
+        }
+        .chooseFilmForm_4{
+            margin: 10px 0;
+            select{
+                width: 125px;
+                height: 40px;
+                // border-bottom-left-radius:30px ;
+                background-color:$color-gray-4;
+                // border-top-left-radius:30px ;
+                @include styleText($fs-2, $fw-normal,$color-white-0);
+                box-shadow: none;
+                outline: none;
+                cursor: pointer;
+                &:hover{
+                    background-color:$color-purple-2;
+                }
+                &:focus{
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+           
+        }
+        .chooseFilmButton{
+            // border-radius: 30px;
+            background-color:$color-gray-4;
+            // border-top-right-radius:30px ;
+            width: 125px;
+            border: none;
+            @include styleText($fs-2, $fw-normal,$color-white-0);
+            height: 40px;
+            cursor: pointer;
+            &:hover{
+                background-color:$color-purple-2;
+            }
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+    
+    @include respond-to("large") {
+        padding: 30px 0;
+        .chooseFilmTitleContain{
+            .chooseFilmTitle{
+                transform: rotate(-10deg);
+              
+                @include styleText(25px,$fw-bold-0,$color-yellow-1);
+                    
+            }
+        }
+        .chooseFilmForm{
+            .chooseFilmForm_1{
+                select{
+                    width: 180px;
+                    height: 35px;
+                    // border-bottom-left-radius:25px ;
+                    // border-bottom-right-radius:25px ;
+                    // border-top-right-radius:25px ;
+                    @include styleText($fs-0, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_2{
+                select{
+                    width: 180px;
+                    height: 35px;
+                    // border-bottom-left-radius:25px ;
+                    // border-bottom-right-radius:25px ;
+                    // border-top-left-radius:25px ;
+                    @include styleText($fs-0, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_3{
+                select{
+                    width: 180px;
+                    height: 35px;
+                    // border-top-left-radius:25px ;
+                    // border-bottom-right-radius:25px ;
+                    // border-top-right-radius:25px ;
+                    @include styleText($fs-0, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_4{
+                select{
+                    width: 90px;
+                    height: 35px;
+                    // border-bottom-left-radius:25px ;
+                    // border-top-left-radius:25px ;
+                    @include styleText($fs-0, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmButton{
+                // border-top-right-radius:25px ;
+                width: 90px;
+                @include styleText($fs-0, $fw-normal,$color-white-0);
+                height: 35px;
+            }
+        }
+        
+      }
+      @include respond-to("small") {
+        padding: 25px 0;
+        .chooseFilmTitleContain{
+            .chooseFilmTitle{
+                transform: rotate(-10deg);
+                @include styleText(25px,$fw-bold-0,$color-yellow-2);
+            }
+        }
+        .chooseFilmForm{
+            .chooseFilmForm_1{
+                select{
+                    margin-left: 15px;
+                    width: 130px;
+                    height: 30px;
+                    // border-bottom-left-radius:20px ;
+                    // border-bottom-right-radius:20px ;
+                    // border-top-right-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_2{
+                select{
+                    margin-left: 15px;
+                    width: 130px;
+                    height: 30px;
+                    // border-bottom-left-radius:20px ;
+                    // border-bottom-right-radius:20px ;
+                    // border-top-left-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_3{
+                select{
+                    margin-left: 15px;
+                    width: 130px;
+                    height: 30px;
+                    // border-top-left-radius:20px ;
+                    // border-bottom-right-radius:20px ;
+                    // border-top-right-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_4{
+                select{
+                    margin-left: 15px;
+                    width: 65px;
+                    height: 30px;
+                    // border-bottom-left-radius:20px ;
+                    // border-top-left-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmButton{
+                // border-top-right-radius:15px ;
+                width: 65px;
+                @include styleText($fs-1, $fw-normal,$color-white-0);
+                height: 30px;
+            }
+        }
+        
+      }
+      @include respond-to("mobile") {
+        padding: 20px 0;
+        .chooseFilmTitleContain{
+            .chooseFilmTitle{
+                transform: rotate(-10deg);
+                @include styleText(22px,$fw-bold-0,$color-yellow-2);
+            }
+        }
+        .chooseFilmForm{
+            .chooseFilmForm_1{
+                select{
+                    margin-left: 10px;
+                    width: 120px;
+                    height: 30px;
+                    // border-bottom-left-radius:20px ;
+                    // border-bottom-right-radius:20px ;
+                    // border-top-right-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_2{
+                select{
+                    margin-left: 10px;
+                    width: 120px;
+                    height: 30px;
+                    // border-bottom-left-radius:20px ;
+                    // border-bottom-right-radius:20px ;
+                    // border-top-left-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_3{
+                select{
+                    margin-left: 10px;
+                    width: 120px;
+                    height: 30px;
+                    // border-top-left-radius:20px ;
+                    // border-bottom-right-radius:20px ;
+                    // border-top-right-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmForm_4{
+                select{
+                    margin-left: 10px;
+                    width: 60px;
+                    height: 30px;
+                    // border-bottom-left-radius:20px ;
+                    // border-top-left-radius:20px ;
+                    @include styleText($fs-1, $fw-normal,$color-white-0);
+                }
+            }
+            .chooseFilmButton{
+                // border-top-right-radius:20px ;
+                width: 60px;
+                @include styleText($fs-1, $fw-normal,$color-white-0);
+                height: 30px;
+            }
+        }
+        
+      }
+}

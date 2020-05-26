@@ -1,0 +1,56 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.brandContainer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:url("https://media.istockphoto.com/photos/black-brick-wall-background-texture-dark-masonry-picture-id915097804?k=6&m=915097804&s=612x612&w=0&h=EsV7PNj296aSAKcrqaiWdM0RG2w4e19YS8XUB_oJvZU=");
+
+    .brandItem{
+        width: 100px;
+        height: 100px;
+        margin: 0 30px;
+        cursor: pointer;
+        position: relative;
+        transition: .5s;
+        &:hover{
+            transform: scale(.9);
+        }
+        .brandItem__Popover1{
+            background-color: #fff;
+            h3{
+                color: red;
+            }
+        }
+    }
+    @include respond-to('large'){
+        // max-width: 750px!important;
+        .brandItem{
+            width: 60px;
+            height: 60px;
+            margin: 0 15px;
+        }
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    
+    }
+    @include respond-to('medium'){
+        // max-width: 750px!important;
+        height: 90px;
+        .brandItem{
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    
+    }
+}
+

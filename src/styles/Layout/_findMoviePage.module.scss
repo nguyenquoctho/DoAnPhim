@@ -1,0 +1,20 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+.findMoviePage{
+    padding-top: 100px;
+    background-image: url("https://cdn.clipart.email/e8a40c2044ac4cd548a339d4fa2080a8_28-collection-of-nighttime-sky-clipart-high-quality-free-_1600-1200.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    h2{
+        @include styleText($fs-7, $fw-bold, $color-white-0);
+        // margin-bottom: 50px;
+    }
+    .findMoviePage__content{
+        text-align: left;
+        margin: 50px 0;
+        background-color: $color-white-0;
+        padding: 30px;
+    }
+}

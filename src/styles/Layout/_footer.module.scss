@@ -1,0 +1,93 @@
+@import "../Helper/mixin";
+@import "../Helper/variable";
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+.footer {
+  position: relative;
+  min-height: 500px;
+  background-color: rgb(33, 34, 127);
+  width: 100wh;
+  @include styleText($fs-0, $fw-normal, $color-white-0);
+  // height: 200vh;
+  .footer__overplay {
+    position: absolute;
+    width: 100%;
+    // min-height: 500px;
+    top: 0;
+    height: 100%;
+    left: 0;
+    // background-image: url("https://sageinvestmentgroup.com/wp-content/uploads/2016/09/footer_3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .footer__container {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .footer__container__Nav{
+      margin: 50px 0;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 5vh;
+      // background-image: url(https://unsplash.it/801);
+      color: $color-yellow-1;
+      background-size: cover;
+      // background-clip: text;
+      // -webkit-background-clip: text;
+      // color: transparent;
+      margin-bottom: 0;
+  }
+    h3 {
+      @include styleText($fs-3, $fw-normal, $color-yellow-1);
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .footer__logo {
+      width: 180px;
+      margin: 50px auto;
+    }
+    .footer__intro {
+      text-align: left;
+      p {
+        @include styleText($fs-0, $fw-normal, $color-gray-3);
+      }
+    }
+    .footer__info {
+      p {
+        a {
+          @include styleText($fs-0, $fw-normal, $color-gray-3);
+          text-decoration: none;
+          &:hover {
+            @include styleText($fs-0, $fw-normal, $color-white-0);
+          }
+          i {
+            margin-right: 7px;
+            color: $color-yellow-1;
+          }
+        }
+      }
+    }
+    .footer__theaters {
+      p {
+        span {
+          @include styleText($fs-0, $fw-normal, $color-gray-3);
+        }
+      }
+    }
+    .footer__contact {
+      text-align: left;
+      p {
+        i {
+          margin-right: 7px;
+          color: $color-yellow-1;
+        }
+        span {
+          @include styleText($fs-0, $fw-normal, $color-gray-3);
+        }
+      }
+    }
+  }
+}
